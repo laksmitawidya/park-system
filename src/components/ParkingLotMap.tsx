@@ -203,12 +203,7 @@ const ParkingLotMap = ({
       >
         <Layer>
           {parkingSpaces.map((space) => (
-            <div
-              key={space.id}
-              onClick={() => {
-                toggleParkingSpace(space);
-              }}
-            >
+            <div key={space.id}>
               <Rect
                 x={space.x}
                 y={space.y}
@@ -217,6 +212,12 @@ const ParkingLotMap = ({
                 fill={space.isOccupied ? "red" : "MediumSeaGreen"}
                 stroke="white"
                 strokeWidth={2}
+                onClick={() => {
+                  toggleParkingSpace(space);
+                }}
+                onTap={() => {
+                  toggleParkingSpace(space);
+                }}
               />
 
               {space.isOccupied ? (
