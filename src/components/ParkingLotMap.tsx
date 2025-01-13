@@ -68,7 +68,7 @@ const ParkingLotMap = ({
   useEffect(() => {
     const onResize = () => {
       setPosition({
-        x: 20,
+        x: 0,
         y: 0,
       });
     };
